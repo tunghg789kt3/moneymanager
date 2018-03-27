@@ -21,7 +21,7 @@
         <activity android:name=".activity.PeriodActivity" />
         <activity android:name=".activity.StatisticsActivity" />
         <activity android:name=".activity.AccountActivity" />
-        <activity android:name=".activity.SettingActivity"></activity>
+        <activity android:name=".activity.SettingActivity" />
     </application>
 
 </manifest>
