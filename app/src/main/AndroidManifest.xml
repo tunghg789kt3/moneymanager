@@ -22,6 +22,7 @@
         <activity android:name=".activity.StatisticsActivity" />
         <activity android:name=".activity.AccountActivity" />
         <activity android:name=".activity.SettingActivity" />
+        <activity android:name=".activity.AddThuChiActivity"></activity>
     </application>
 
 </manifest>
