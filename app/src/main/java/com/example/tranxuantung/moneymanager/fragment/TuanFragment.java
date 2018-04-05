@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.example.tranxuantung.moneymanager.R;
 
@@ -14,12 +13,12 @@ import com.example.tranxuantung.moneymanager.R;
  * Created by TranXuanTung on 22/03/2018.
  */
 
-public class NgayFragment extends Fragment{
+public class TuanFragment extends Fragment{
 
-    public NgayFragment(){}
+    public TuanFragment(){}
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_ngay, container, false);
+        return inflater.inflate(R.layout.fragment_tuan, container, false);
     }
 }

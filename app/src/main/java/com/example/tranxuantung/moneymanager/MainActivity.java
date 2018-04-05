@@ -21,33 +21,29 @@ public class MainActivity extends TabActivity {
         setContentView(R.layout.activity_main);
 
         TabHost tabHost = (TabHost) findViewById(android.R.id.tabhost);
-        TabHost.TabSpec spec;
-        Intent intent;
 
-        spec = tabHost.newTabSpec("period");
-        spec.setIndicator("Chu kì");
-        intent = new Intent(this, PeriodActivity.class);
-        spec.setContent(intent);
-        tabHost.addTab(spec);
+        TabHost.TabSpec spec1 = tabHost.newTabSpec("period");
+        spec1.setIndicator("Chu kì");
+        spec1.setContent(new Intent(this, PeriodActivity.class));
+        tabHost.addTab(spec1);
 
-        spec = tabHost.newTabSpec("statistics");
-        spec.setIndicator("Thống kê");
-        intent = new Intent(this, StatisticsActivity.class);
-        spec.setContent(intent);
-        tabHost.addTab(spec);
+        TabHost.TabSpec spec2 = tabHost.newTabSpec("statistics");
+        spec2.setIndicator("Thống kê");
+        spec2.setContent(new Intent(this, StatisticsActivity.class));
+        tabHost.addTab(spec2);
 
-        spec = tabHost.newTabSpec("account");
-        spec.setIndicator("Tài khoản");
-        intent = new Intent(this, AccountActivity.class);
-        spec.setContent(intent);
-        tabHost.addTab(spec);
+        TabHost.TabSpec spec3 = tabHost.newTabSpec("account");
+        spec3.setIndicator("Tài khoản");
+        spec3.setContent(new Intent(this, AccountActivity.class));
+        tabHost.addTab(spec3);
 
-        spec = tabHost.newTabSpec("setting");
-        spec.setIndicator("Cài đặt");
-        intent = new Intent(this, SettingActivity.class);
-        spec.setContent(intent);
-        tabHost.addTab(spec);
+        TabHost.TabSpec spec4 = tabHost.newTabSpec("setting");
+        spec4.setIndicator("Cài đặt");
+        spec4.setContent(new Intent(this, SettingActivity.class));
+        tabHost.addTab(spec4);
+
         setTabColor(tabHost);
+
         tabHost.setCurrentTab(0);
     }
     private void setTabColor(TabHost tabHost) {

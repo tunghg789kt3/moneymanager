@@ -2,11 +2,10 @@ package com.example.tranxuantung.moneymanager.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.example.tranxuantung.moneymanager.fragment.ChukiFragment;
-import com.example.tranxuantung.moneymanager.fragment.NgayFragment;
+import com.example.tranxuantung.moneymanager.fragment.TuanFragment;
 import com.example.tranxuantung.moneymanager.fragment.ThangFragment;
 import com.example.tranxuantung.moneymanager.fragment.TongFragment;
 
@@ -27,7 +26,7 @@ public class ChukiPagerAdapter extends FragmentStatePagerAdapter {
                 fragment = new ChukiFragment();
                 break;
             case 1:
-                fragment = new NgayFragment();
+                fragment = new TuanFragment();
                 break;
             case 2:
                 fragment = new ThangFragment();
@@ -49,16 +48,16 @@ public class ChukiPagerAdapter extends FragmentStatePagerAdapter {
         String title = "";
         switch (position){
             case 0:
-                title = "Chu Kì";
+                title = "Chu ki";
                 break;
             case 1:
-                title = "Ngày";
+                title = "Tuan";
                 break;
             case 2:
-                title = "Tháng";
+                title = "Thang";
                 break;
             case 3:
-                title = "Tổng";
+                title = "Tong";
                 break;
         }
         return title;

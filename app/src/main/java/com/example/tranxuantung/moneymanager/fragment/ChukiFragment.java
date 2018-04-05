@@ -14,9 +14,10 @@ import com.example.tranxuantung.moneymanager.R;
  * Created by TranXuanTung on 22/03/2018.
  */
 
-public class ChukiFragment extends Fragment{
+public class ChukiFragment extends Fragment {
 
-    public ChukiFragment(){}
+    public ChukiFragment() {
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
