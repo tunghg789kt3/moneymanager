@@ -18,7 +18,6 @@ public class TongFragment extends Fragment{
 
     public TongFragment(){}
 
-    @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_tong, container, false);

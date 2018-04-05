@@ -13,9 +13,9 @@ import com.example.tranxuantung.moneymanager.R;
  * Created by TranXuanTung on 22/03/2018.
  */
 
-public class NgayFragment extends Fragment{
+public class TuanFragment extends Fragment{
 
-    public NgayFragment(){}
+    public TuanFragment(){}
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
