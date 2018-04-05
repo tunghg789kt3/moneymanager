@@ -49,16 +49,16 @@ public class ChukiPagerAdapter extends FragmentStatePagerAdapter {
         String title = "";
         switch (position){
             case 0:
-                title = "Chu ki";
+                title = "Chu Kì";
                 break;
             case 1:
-                title = "Ngay";
+                title = "Ngày";
                 break;
             case 2:
-                title = "Thang";
+                title = "Tháng";
                 break;
             case 3:
-                title = "Tong";
+                title = "Tổng";
                 break;
         }
         return title;
