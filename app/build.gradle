@@ -31,4 +31,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation 'com.android.support:design:26.1.0-alpha1'
     compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
 }

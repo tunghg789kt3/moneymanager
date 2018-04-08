@@ -44,10 +44,10 @@ public class AddPageAdapter extends FragmentStatePagerAdapter {
         String title = "";
         switch (position){
             case 0:
-                title = "Thu";
+                title = "Chi";
                 break;
             case 1:
-                title = "Chi";
+                title = "Thu";
                 break;
             case 2:
                 title = "Chuyển Khoản";

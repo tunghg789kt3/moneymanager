@@ -1,91 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp">
+        android:layout_marginBottom="5dp"
+        android:weightSum="10"
+        android:layout_marginTop="5dp">
+
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="9"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="3"
             android:text="Ngày"
-            android:layout_marginLeft="15dp"
-            android:textSize="7.5pt"
-            android:textColor="#000000"/>
+            android:textColor="#000000"
+            android:textSize="@dimen/textSideFont" />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:textSize="@dimen/textSideFont"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp">
+        android:layout_marginBottom="5dp"
+        android:weightSum="10">
+
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="9"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="3"
             android:text="Chuyển xuất"
-            android:layout_marginLeft="15dp"
-            android:textSize="7.5pt"
-            android:textColor="#000000"/>
+            android:textColor="#000000"
+            android:textSize="@dimen/textSideFont" />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:textSize="@dimen/textSideFont"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp">
+        android:weightSum="10"
+        android:layout_marginBottom="5dp">
+
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="9"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="3"
             android:text="Chuyển nhập"
-            android:layout_marginLeft="15dp"
-            android:textSize="7.5pt"
-            android:textColor="#000000"/>
+            android:textColor="#000000"
+            android:textSize="@dimen/textSideFont" />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:textSize="@dimen/textSideFont"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp">
+        android:layout_marginBottom="5dp"
+        android:weightSum="10">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:layout_weight="9"
+            android:layout_weight="3"
             android:text="Số tiền"
             android:textColor="#000000"
-            android:textSize="7.5pt" />
+            android:textSize="@dimen/textSideFont" />
 
         <EditText
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            />
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:textSize="@dimen/textSideFont"
+            android:inputType="number"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp">
+        android:layout_marginBottom="5dp"
+        android:weightSum="10">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:layout_weight="9"
+            android:layout_weight="3"
             android:text="Đối tượng"
             android:textColor="#000000"
-            android:textSize="7.5pt" />
+            android:textSize="@dimen/textSideFont" />
 
         <EditText
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            />
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:textSize="@dimen/textSideFont"
+            android:layout_height="wrap_content" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:weightSum="10">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="3"
+            android:text="Ghi chú"
+            android:textColor="#000000"
+            android:textSize="@dimen/textSideFont" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:textSize="@dimen/textSideFont"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:weightSum="10"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_height="wrap_content"
+            android:text="Lưu" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Tiếp tục" />
     </LinearLayout>
 
 </LinearLayout>
