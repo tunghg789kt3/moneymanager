@@ -138,7 +138,7 @@
             android:textSize="@dimen/textSideFont" />
 
         <EditText
-            android:id="@+id/ghiChuThu"
+            android:id="@+id/edtGhichuThu"
             android:layout_width="0dp"
             android:layout_weight="7"
             android:textSize="@dimen/textSideFont"
@@ -161,7 +161,7 @@
             android:text="Lưu" />
 
         <Button
-            android:id="@+id/btnErase"
+            android:id="@+id/btnEraseThu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"

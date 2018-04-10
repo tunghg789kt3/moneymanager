@@ -19,11 +19,13 @@
             android:text="Ngày"
             android:textColor="#000000"
             android:textSize="@dimen/textSideFont" />
+
         <EditText
+            android:id="@+id/edtNgayChi"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="7"
-            android:textSize="@dimen/textSideFont"
-            android:layout_height="wrap_content" />
+            android:textSize="@dimen/textSideFont" />
 
     </LinearLayout>
 
@@ -41,11 +43,13 @@
             android:text="Tài khoản"
             android:textColor="#000000"
             android:textSize="@dimen/textSideFont" />
+
         <EditText
+            android:id="@+id/edtTaikhoanChi"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="7"
-            android:textSize="@dimen/textSideFont"
-            android:layout_height="wrap_content" />
+            android:textSize="@dimen/textSideFont" />
 
     </LinearLayout>
 
@@ -63,11 +67,13 @@
             android:text="Danh mục"
             android:textColor="#000000"
             android:textSize="@dimen/textSideFont" />
+
         <EditText
+            android:id="@+id/edtDanhmucChi"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="7"
-            android:textSize="@dimen/textSideFont"
-            android:layout_height="wrap_content" />
+            android:textSize="@dimen/textSideFont" />
 
     </LinearLayout>
 
@@ -87,11 +93,12 @@
             android:textSize="@dimen/textSideFont" />
 
         <EditText
+            android:id="@+id/edtSotienChi"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="7"
-            android:textSize="@dimen/textSideFont"
             android:inputType="number"
-            android:layout_height="wrap_content" />
+            android:textSize="@dimen/textSideFont" />
     </LinearLayout>
 
     <LinearLayout
@@ -110,10 +117,11 @@
             android:textSize="@dimen/textSideFont" />
 
         <EditText
+            android:id="@+id/edtDoituongChi"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="7"
-            android:textSize="@dimen/textSideFont"
-            android:layout_height="wrap_content" />
+            android:textSize="@dimen/textSideFont" />
 
     </LinearLayout>
 
@@ -133,10 +141,11 @@
             android:textSize="@dimen/textSideFont" />
 
         <EditText
+            android:id="@+id/edtGhichuChi"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="7"
-            android:textSize="@dimen/textSideFont"
-            android:layout_height="wrap_content" />
+            android:textSize="@dimen/textSideFont" />
 
     </LinearLayout>
 
@@ -148,16 +157,18 @@
         android:gravity="center">
 
         <Button
+            android:id="@+id/btnAddChi"
             android:layout_width="0dp"
-            android:layout_weight="6"
             android:layout_height="wrap_content"
+            android:layout_weight="6"
             android:text="Lưu" />
 
         <Button
+            android:id="@+id/btnEraseChi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:text="Tiếp tục" />
+            android:text="Xóa trắng" />
     </LinearLayout>
 
 </LinearLayout>
