@@ -50,24 +50,26 @@ public class ThuFragment extends Fragment {
             public void onClick(View view) {
                 String taikhoanThu = edtTaikhoanThu.getText().toString().trim();
                 String danhmucThu = edtDanhmucThu.getText().toString().trim();
-                double sotienThu = Double.parseDouble(edtTaikhoanThu.getText().toString().trim());
+                String sotienThuText = edtSotienThu.getText().toString().trim();
                 String doituongThu = edtDoituongThu.getText().toString().trim();
                 String ghichuThu = edtGhichuThu.getText().toString().trim();
-                DTTaiKhoan dtTaiKhoan = new DTTaiKhoan(ngayHT, taikhoanThu, danhmucThu, sotienThu, doituongThu, ghichuThu);
 
-                if (taikhoanThu == "") {
+
+                if (taikhoanThu.equals("")) {
                     Toast.makeText(getContext(), "Tài khoản không được để trống!", Toast.LENGTH_SHORT).show();
                     edtTaikhoanThu.requestFocus();
-                }else if (danhmucThu == ""){
+                }else if (danhmucThu.equals("")){
                     Toast.makeText(getContext(), "Danh mục không được để trống!", Toast.LENGTH_SHORT).show();
                     edtDanhmucThu.requestFocus();
-                }else if (edtSotienThu.getText().toString().trim() == ""){
+                }else if (sotienThuText.equals("")){
                     Toast.makeText(getContext(), "Số tiền không được để trống!", Toast.LENGTH_SHORT).show();
                     edtSotienThu.requestFocus();
-                }else if (doituongThu == ""){
+                }else if (doituongThu.equals("")){
                     Toast.makeText(getContext(), "Đối tượng không được để trống!", Toast.LENGTH_SHORT).show();
                     edtDoituongThu.requestFocus();
                 }else{
+                    double sotienThu = Double.parseDouble(sotienThuText);
+                    DTTaiKhoan dtTaiKhoan = new DTTaiKhoan(ngayHT, taikhoanThu, danhmucThu, sotienThu, doituongThu, ghichuThu);
                     if (data.saveThu(dtTaiKhoan)) {
                         Toast.makeText(getContext(), "Đã lưu thành công!", Toast.LENGTH_SHORT).show();
                     } else Toast.makeText(getContext(), "Lỗi!", Toast.LENGTH_SHORT).show();
