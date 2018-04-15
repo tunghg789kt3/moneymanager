@@ -17,7 +17,7 @@ import com.example.tranxuantung.moneymanager.database.Data;
 import java.text.SimpleDateFormat;
 
 public class ChiFragment extends Fragment {
-    EditText edtNgayChi, edtTaikhoanChi, edtDanhmucChi, edtSotienChi, edtDoituongChi, edtGhichuChi;
+    EditText edtNgayChi, edtTaikhoanChi, edtDanhmucChi, edtSotienChi;
     Button btnAddChi, btnEraseChi;
     Data data;
     long ngayHT;
@@ -31,8 +31,6 @@ public class ChiFragment extends Fragment {
         edtTaikhoanChi = (EditText) view.findViewById(R.id.edtTaikhoanChi);
         edtDanhmucChi = (EditText) view.findViewById(R.id.edtDanhmucChi);
         edtSotienChi = (EditText) view.findViewById(R.id.edtSotienChi);
-        edtDoituongChi = (EditText) view.findViewById(R.id.edtDoituongChi);
-        edtGhichuChi = (EditText) view.findViewById(R.id.edtGhichuChi);
         ngayHT = System.currentTimeMillis();
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 
@@ -51,9 +49,6 @@ public class ChiFragment extends Fragment {
                 String danhmucChi = edtDanhmucChi.getText().toString().trim();
                 String sotienChiText = edtSotienChi.getText().toString().trim();
 
-                String doituongChi = edtDoituongChi.getText().toString().trim();
-                String ghichuChi = edtGhichuChi.getText().toString().trim();
-
                 if (taikhoanChi.equals("")) {
                     Toast.makeText(getContext(), "Tài khoản không được để trống!", Toast.LENGTH_SHORT).show();
                     edtTaikhoanChi.requestFocus();
@@ -63,12 +58,9 @@ public class ChiFragment extends Fragment {
                 }else if (sotienChiText.equals("")){
                     Toast.makeText(getContext(), "Số tiền không được để trống!", Toast.LENGTH_SHORT).show();
                     edtSotienChi.requestFocus();
-                }else if (doituongChi.equals("")){
-                    Toast.makeText(getContext(), "Đối tượng không được để trống!", Toast.LENGTH_SHORT).show();
-                    edtDoituongChi.requestFocus();
                 }else{
                     double sotienChi = Double.parseDouble(sotienChiText);
-                    DTTaiKhoan dtTaiKhoan = new DTTaiKhoan(ngayHT, taikhoanChi, danhmucChi, sotienChi, doituongChi, ghichuChi);
+                    DTTaiKhoan dtTaiKhoan = new DTTaiKhoan(ngayHT, taikhoanChi, danhmucChi, sotienChi);
                     if (data.saveChi(dtTaiKhoan)) {
                         Toast.makeText(getContext(), "Đã lưu thành công!", Toast.LENGTH_SHORT).show();
                     } else Toast.makeText(getContext(), "Lỗi!", Toast.LENGTH_SHORT).show();
@@ -82,8 +74,6 @@ public class ChiFragment extends Fragment {
                 edtTaikhoanChi.setText("");
                 edtDanhmucChi.setText("");
                 edtSotienChi.setText("");
-                edtDoituongChi.setText("");
-                edtGhichuChi.setText("");
             }
         });
 

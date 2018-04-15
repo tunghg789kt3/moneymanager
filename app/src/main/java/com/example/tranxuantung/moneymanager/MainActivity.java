@@ -12,13 +12,16 @@ import com.example.tranxuantung.moneymanager.activity.AccountActivity;
 import com.example.tranxuantung.moneymanager.activity.PeriodActivity;
 import com.example.tranxuantung.moneymanager.activity.SettingActivity;
 import com.example.tranxuantung.moneymanager.activity.StatisticsActivity;
+import com.example.tranxuantung.moneymanager.database.Data;
 
 public class MainActivity extends TabActivity {
+    Data data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        data =new Data(this);
 
         TabHost tabHost = (TabHost) findViewById(android.R.id.tabhost);
 

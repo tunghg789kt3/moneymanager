@@ -11,37 +11,54 @@
         android:paddingTop="5dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:paddingBottom="5dp"
-        android:weightSum="10">
+        android:paddingBottom="5dp">
         <TextView
+            android:id="@+id/tvDate"
             android:text="dd/mm/yy"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_marginLeft="5dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="5"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:text="0đ"
-            android:gravity="right"
-            android:textColor="@color/colorThu"
-            android:layout_weight="2.5"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="0đ"
-            android:gravity="right"
-            android:textColor="@color/colorChi"
-            android:layout_marginRight="5dp"
-            android:layout_weight="2.5"/>
+            android:layout_height="wrap_content" />
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="1.5dp"
         android:background="@drawable/borderlines"/>
-    <ListView
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></ListView>
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:weightSum="20">
+            <TextView
+                android:id="@+id/tvDanhMuc"
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                android:text="Danh muc"/>
+            <TextView
+                android:id="@+id/tvTaiKhoan"
+                android:layout_weight="9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Tai khoan"/>
+            <TextView
+                android:id="@+id/tvSotien"
+                android:layout_weight="6"
+                android:layout_width="0dp"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:text="0đ"/>
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>

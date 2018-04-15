@@ -25,6 +25,7 @@
                 android:textColor="@color/colorBlack"
                 android:layout_gravity="center_horizontal"/>
             <TextView
+                android:id="@+id/tvThuThang"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"
@@ -45,6 +46,7 @@
                 android:textColor="@color/colorBlack"
                 android:layout_gravity="center_horizontal"/>
             <TextView
+                android:id="@+id/tvChiThang"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"
@@ -65,6 +67,7 @@
                 android:textColor="@color/colorBlack"
                 android:layout_gravity="center_horizontal"/>
             <TextView
+                android:id="@+id/tvCongThang"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"

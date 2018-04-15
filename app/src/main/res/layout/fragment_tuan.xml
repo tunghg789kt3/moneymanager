@@ -29,6 +29,7 @@
                 android:textSize="@dimen/textSideFont" />
 
             <TextView
+                android:id="@+id/tvThuTuan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -52,6 +53,7 @@
                 android:textSize="@dimen/textSideFont" />
 
             <TextView
+                android:id="@+id/tvChiTuan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -75,6 +77,7 @@
                 android:textSize="@dimen/textSideFont" />
 
             <TextView
+                android:id="@+id/tvCongTuan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"

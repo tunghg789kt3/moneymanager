@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.example.tranxuantung.moneymanager.R;
 import com.example.tranxuantung.moneymanager.adapter.AddPageAdapter;
@@ -28,5 +29,11 @@ public class AddThuChiActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(pager);
         pager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.setTabsFromPagerAdapter(adapter);
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Toast.makeText(this, "ok em yêu", Toast.LENGTH_SHORT).show();
+
     }
 }

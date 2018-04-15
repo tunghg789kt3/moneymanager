@@ -1,5 +1,6 @@
 package com.example.tranxuantung.moneymanager.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -12,13 +13,15 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.tranxuantung.moneymanager.DoiTuong.DTTaiKhoan;
+import com.example.tranxuantung.moneymanager.MainActivity;
 import com.example.tranxuantung.moneymanager.R;
+import com.example.tranxuantung.moneymanager.activity.AddThuChiActivity;
 import com.example.tranxuantung.moneymanager.database.Data;
 
 import java.text.SimpleDateFormat;
 
 public class ThuFragment extends Fragment {
-    EditText edtNgayThu, edtTaikhoanThu, edtDanhmucThu, edtSotienThu, edtDoituongThu, edtGhichuThu;
+    EditText edtNgayThu, edtTaikhoanThu, edtDanhmucThu, edtSotienThu;
     Button btnAddThu, btnEraseThu;
     Data data;
     long ngayHT;
@@ -33,8 +36,6 @@ public class ThuFragment extends Fragment {
         edtTaikhoanThu = (EditText) view.findViewById(R.id.edtTaikhoanThu);
         edtDanhmucThu = (EditText) view.findViewById(R.id.edtDanhmucThu);
         edtSotienThu = (EditText) view.findViewById(R.id.edtSotienThu);
-        edtDoituongThu = (EditText) view.findViewById(R.id.edtDoituongThu);
-        edtGhichuThu = (EditText) view.findViewById(R.id.edtGhichuThu);
         ngayHT = System.currentTimeMillis();
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 
@@ -51,8 +52,6 @@ public class ThuFragment extends Fragment {
                 String taikhoanThu = edtTaikhoanThu.getText().toString().trim();
                 String danhmucThu = edtDanhmucThu.getText().toString().trim();
                 String sotienThuText = edtSotienThu.getText().toString().trim();
-                String doituongThu = edtDoituongThu.getText().toString().trim();
-                String ghichuThu = edtGhichuThu.getText().toString().trim();
 
 
                 if (taikhoanThu.equals("")) {
@@ -64,12 +63,9 @@ public class ThuFragment extends Fragment {
                 }else if (sotienThuText.equals("")){
                     Toast.makeText(getContext(), "Số tiền không được để trống!", Toast.LENGTH_SHORT).show();
                     edtSotienThu.requestFocus();
-                }else if (doituongThu.equals("")){
-                    Toast.makeText(getContext(), "Đối tượng không được để trống!", Toast.LENGTH_SHORT).show();
-                    edtDoituongThu.requestFocus();
                 }else{
                     double sotienThu = Double.parseDouble(sotienThuText);
-                    DTTaiKhoan dtTaiKhoan = new DTTaiKhoan(ngayHT, taikhoanThu, danhmucThu, sotienThu, doituongThu, ghichuThu);
+                    DTTaiKhoan dtTaiKhoan = new DTTaiKhoan(ngayHT, taikhoanThu, danhmucThu, sotienThu);
                     if (data.saveThu(dtTaiKhoan)) {
                         Toast.makeText(getContext(), "Đã lưu thành công!", Toast.LENGTH_SHORT).show();
                     } else Toast.makeText(getContext(), "Lỗi!", Toast.LENGTH_SHORT).show();
@@ -83,8 +79,6 @@ public class ThuFragment extends Fragment {
                 edtTaikhoanThu.setText("");
                 edtDanhmucThu.setText("");
                 edtSotienThu.setText("");
-                edtDoituongThu.setText("");
-                edtGhichuThu.setText("");
             }
         });
 

@@ -3,7 +3,8 @@
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="4">
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -26,6 +27,7 @@
                 android:textColor="@color/colorBlack"
                 android:layout_gravity="center_horizontal"/>
             <TextView
+                android:id="@+id/tvTongThu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"
@@ -46,6 +48,7 @@
                 android:textColor="@color/colorBlack"
                 android:layout_gravity="center_horizontal"/>
             <TextView
+                android:id="@+id/tvTongChi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"
@@ -66,6 +69,7 @@
                 android:textColor="@color/colorBlack"
                 android:layout_gravity="center_horizontal"/>
             <TextView
+                android:id="@+id/tvTong"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"
@@ -74,7 +78,28 @@
                 android:textColor="@color/colorBlack"/>
         </LinearLayout>
     </LinearLayout>
+    <TextView
+        android:textColor="@color/colorThu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thu"
+        android:textSize="20dp"
+        android:layout_margin="8dp"/>
     <ListView
+        android:id="@+id/lvThu"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></ListView>
+        android:layout_height="0dp"
+        android:layout_weight="2"></ListView>
+    <TextView
+        android:textColor="@color/colorChi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chi"
+        android:textSize="20dp"
+        android:layout_margin="8dp"/>
+    <ListView
+        android:id="@+id/lvChi"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"></ListView>
 </LinearLayout>
